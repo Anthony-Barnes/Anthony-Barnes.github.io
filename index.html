@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Anthony Barnes">
+		<title>Tic-Tac-Toe</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<h1>Tic-Tac-Toe</h1>
+		<!-- Button for initiating game -->
+		<button type="button" id="play-button" class="show" autofocus="autofocus" onclick="playButton();">Play</button>
+		
+		<!-- Forms for collecing player names and markers -->
+		<div id="player-info-collection" class="hide">
+			<form action="javascript:void(0);" id="player-one-info" class="show">
+				<div class="name-entry">
+					<h2>Player 1, Enter Your Name</h2>
+					<input type="text" id="player-one-name" name="player-one-name" maxlength="16" required>
+				</div>
+				<div class="marker-selection">
+					<h2>Choose Your Marker</h2>
+					<div class="marker-options">
+						<div>
+							<label for="x"><img src="img/x.png" alt="X" width="140" height="140"></label>
+							<input type="radio" name="x-options" id="x" value="img/x.png" checked="checked">
+						</div>
+						<div>
+							<label for="crossbones"><img src="img/crossbones.jpg" alt="Crossbones" width="140" height="140"></label>
+							<input type="radio" name="x-options" id="crossbones" value="img/crossbones.jpg">
+						</div>
+						<div>
+							<label for="railroad-crossing"><img src="img/railroad-crossing.jpg" alt="Railroad Crossing Sign" width="140" height="140"></label>
+							<input type="radio" name="x-options" id="railroad-crossing" value="img/railroad-crossing.jpg">
+						</div>
+					</div>
+				</div>
+				<input type="submit" value="Next Player" onclick="getPlayerInfo(0, 'player-one-name', 'x-options');">
+			</form>
+			
+			<form action="javascript:void(0);" id="player-two-info" class="hide">
+				<div class="name-entry">
+					<h2>Player 2, Enter Your Name</h2>
+					<input type="text" id="player-two-name" name="player-two-name" maxlength="16" required>
+				</div>
+				<div class="marker-selection">
+					<h2>Choose Your Marker</h2>
+					<div class="marker-options">
+						<div>
+							<label for="o"><img src="img/o.png" alt="O" width="140" height="140"></label>
+							<input type="radio" name="o-options" id="o" value="img/o.png" checked="checked">
+						</div>
+						<div>
+							<label for="donut"><img src="img/donut.jpg" alt="Donut" width="140" height="140"></label>
+							<input type="radio" name="o-options" id="donut" value="img/donut.jpg">
+						</div>
+						<div>
+							<label for="one-ring"><img src="img/one-ring.jpg" alt="The One Ring" width="140" height="140"></label>
+							<input type="radio" name="o-options" id="one-ring" value="img/one-ring.jpg">
+						</div>
+					</div>
+				</div>
+				<input type="submit" value="Start Game" onclick="getPlayerInfo(1, 'player-two-name', 'o-options');">
+			</form>
+		</div>
+		
+		<!-- Tic-tac-toe board -->
+		<div id="game-board" class="hide">
+			<div id="row-1">
+				<div onclick="playerMove(this, 1);"></div>
+				<div onclick="playerMove(this, 2);"></div>
+				<div onclick="playerMove(this, 4);"></div>
+			</div>
+			<div id="row-2">
+				<div onclick="playerMove(this, 8);"></div>
+				<div onclick="playerMove(this, 16);"></div>
+				<div onclick="playerMove(this, 32);"></div>
+			</div>
+			<div id="row-3">
+				<div onclick="playerMove(this, 64);"></div>
+				<div onclick="playerMove(this, 128);"></div>
+				<div onclick="playerMove(this, 256);"></div>
+			</div>
+		</div>
+		
+		<!-- Display area that shows player names, wins, and game events -->
+		<div id="game-info" class="hide">
+			<div class="player">
+				<div class="player-name">
+					<h3>Player 1</h3>
+					<p id="player-one">Username</p>
+				</div>
+				<div class="wins">
+					<h3>Wins:</h3>
+					<p id="player-one-score" class="score">00</p>
+				</div>
+			</div>
+			<div id="game-message">
+				<h3 id="player-turn" class="show">Player Turn</h3>
+				<p id="event-message">Player</p>
+				
+				<!-- Button that resets the board and begins a rematch -->
+				<button type="button" id="rematch-button" class="hide" onclick="rematch();">Rematch?</button>
+			</div>
+			<div class="player">
+				<div class="player-name">
+					<h3>Player 2</h3>
+					<p id="player-two">Username</p>
+				</div>
+				<div class="wins">
+					<h3>Wins:</h3>
+					<p id="player-two-score" class="score">00</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
