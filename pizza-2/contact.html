@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Anthony Barnes">
+		<title>Tony's Pizzeria - Contact</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style>
+			 nav ul li a
+			{
+				display: block;
+				text-decoration: none;
+				font-family: 'permanent marker', cursive;
+				color: grey;
+				font-size: 28px;
+				border-radius: 25% 25% 25% 25% / 50% 50% 50% 50%;
+				background-color: black;
+				width: 150px;
+				border: 3px outset white;
+				text-shadow: 1px 1px 2px black;
+			}
+			
+			nav ul li a.active
+			{
+				background-color: white;
+				text-shadow: 1px 1px 2px black;
+				border: 3px solid black;
+			}
+		</style>
+	</head>
+	
+	<body class="contact">
+		<div id="navigation">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a class="active" href="contact.html">Contact</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="order.html">Order</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		<h1>Contact Tony's</h1>
+		
+		<div class="wide">
+			<p>Want to tell us how your experience in the restaurant was? Report a problem? Offer a suggestion? Whatever it is, we want to know about it! Feedback is how we make sure we continue to grow and improve, so please fill out the form below to send us your comments.</p>
+		</div>
+		
+		<div class="row">
+			<form id="contact-form" method="post" action="https://www.stonecoldprofessor.com/pizza-contact.php">
+				<div>
+					<label for="first-name">First Name:</label>
+					<br>
+					<input type="text" name="first-name" id="first-name" placeholder="First Name">
+				</div>
+				
+				<div>
+					<label for="last-name">Last Name:</label>
+					<br>
+					<input type="text" name="last-name" id="last-name" placeholder="Last Name">
+				</div>
+				
+				<div>
+					<label for="email">Email Address:</label>
+					<br>
+					<input type="email" name="email" id="email" placeholder="Email Address">
+				</div>
+				
+				<div>
+					<label for="message">Message:</label>
+					<br>
+					<textarea name="message" id="message" placeholder="Send us a message!"></textarea>
+				</div>
+				
+				<div>
+					<input type="submit" value="Send">
+					<input type="reset" value="Clear">
+				</div>
+			</form>
+			
+			<img src="img/pizza-and-beer.jpg" alt="Pizza Slice">
+		</div>
+	</body>
+</html>

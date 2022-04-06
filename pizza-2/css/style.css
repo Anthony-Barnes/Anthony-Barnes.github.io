@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+*
+{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+html
+{
+	height: 100%;
+	background-image: url("../img/wood.jpg");
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+body
+{
+	margin: 0px auto;
+	width: 1050px;
+	height: 100%;
+	border: 2px solid grey;
+	background-color: black;
+	color: white;
+	padding: 35px;
+}
+
+body.home
+{
+	min-height: 850px;
+}
+
+body.contact
+{
+	min-height: 910px;
+}
+
+body.about
+{
+	min-height: 970px;
+}
+
+body.order
+{
+	min-height: 2017px;
+}
+
+div#navigation
+{
+	position: sticky;
+	top: 37px;
+}
+
+nav
+{
+	position: absolute;
+	top: -37px;
+	left: -37px;
+}
+
+nav ul
+{
+	margin: 0px auto;
+	width: 1050px;
+	display: flex;
+	list-style: none;
+	justify-content: center;	
+	background-color: grey;
+}
+
+nav ul li
+{
+	margin: 10px 25px;
+	text-align: center;
+}
+
+a
+{
+	transition: 400ms;
+}
+
+nav ul li a:not(.active):hover
+{
+	background-color: lightgrey;
+	color: white;
+	border-color: dimgrey;
+	transition: 400ms;
+}
+
+h1, h2
+{
+	font-family: 'permanent marker', cursive;
+	letter-spacing: 3px;
+	margin: 15px 0px;
+	color: lightgrey;
+}
+
+h1
+{
+	text-align: center;
+	margin-top: 65px;
+	font-size: 42px;
+}
+
+h2
+{
+	font-size: 34px;
+}
+
+div.wide
+{
+	padding: 10px;
+	width: 896px;
+	margin: 0px auto;
+}
+
+.order-heading
+{
+	text-align: center;
+}
+
+div.row
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.paragraph
+{
+	width: 500px;
+	margin: 10px;
+}
+
+#welcome-paragraph
+{
+	display: flex;
+	flex-direction: column;
+}
+
+#welcome-paragraph a:hover
+{
+	background-color: white;
+	color: grey;
+	border-color: lightgrey;
+}
+
+#welcome-paragraph p
+{
+	margin-bottom: 25px;
+}
+
+img
+{
+	width: 420px;
+	margin: 10px;
+}
+
+p
+{
+	text-align: justify;
+	line-height: 28px;
+}
+
+h3, h4
+{
+	font-family: tahoma;
+	text-align: center;
+	margin: 16px;
+	color: grey;
+}
+
+h3
+{
+	font-size: 24px;
+}
+
+h4
+{
+	font-size: 20px;
+}
+
+#contact-form div
+{
+	margin: 12px 0px;
+}
+
+#contact-form div:first-child
+{
+	margin: 0px;
+}
+
+#contact-form input[type='text'], #contact-form input[type='email']
+{
+	margin-top: 5px;
+	width: 400px;
+}
+
+#contact-form textarea
+{
+	height: 200px;
+}
+
+#contact-form input[type='submit'], #contact-form input[type='reset']
+{
+	font-size: 22px;
+	font-weight: bold;
+	width: 100px;
+	margin: 5px 20px;
+}
+
+#contact-form div:last-child
+{
+	text-align: center;
+}
+
+form
+{
+	margin: 10px;
+}
+
+.radio-and-checkboxes
+{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 36px;
+}
+
+#crust-select
+{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.veggies
+{
+	width: 230px;
+	padding-left: 65px;
+}
+
+.veggies div
+{
+	margin: 8px 0px;
+}
+
+#cheese, #heat
+{
+	justify-content: center;
+}
+
+#cheese div
+{
+	width: 220px;
+	text-align: center;
+}
+
+#heat div
+{
+	width: 170px;
+	margin: 0px 40px;
+}
+
+#heat div:first-child
+{
+	text-align: right;
+}
+
+#instructions
+{
+	text-align: center;
+	margin: 48px 0px 36px;
+}
+
+textarea
+{
+	width: 400px;
+	height: 80px;
+	margin-top: 5px;
+	padding: 5px;
+	font-size: 16px;
+	font-family: tahoma;
+}
+
+input[type='text'], select, input[type='email']
+{
+	font-size: 16px;
+	font-family: tahoma;
+	padding: 2px 5px;
+}
+
+label, p
+{
+	font-size: 16px;
+	font-family: tahoma;
+}
+
+#customer-info
+{
+	width: 500px;
+	margin: 0px auto;
+}
+
+#customer-info div
+{
+	text-align: center;
+}
+
+#customer-info input[type='text'], #customer-info input[type='email']
+{
+	width: 260px;
+}
+
+#state-and-zip
+{
+	display: flex;
+	justify-content: space-between;
+	width: 260px;
+	margin: 0px auto;
+}
+
+#customer-info input[type='text']#first-name, #customer-info input[type='text']#last-name
+{
+	width: 200px;
+}
+
+#customer-info input[type='text']#zip
+{
+	width: 155px;
+}
+
+#customer-info input, #customer-info select
+{
+	margin-top: 4px;
+}
+
+#address
+{
+	margin-bottom: 4px;
+}
+
+.customer-field
+{
+	margin: 14px 0px;;
+}
+
+#customer-info input[type='submit']
+{
+	width: 128px;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 6px 14px;
+}
+
+#customer-info input[type='reset']
+{
+	width: 70px;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 6px 14px;
+}

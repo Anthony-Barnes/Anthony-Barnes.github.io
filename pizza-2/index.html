@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Anthony Barnes">
+		<title>Tony's Pizzeria</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style>
+			 nav ul li a
+			{
+				display: block;
+				text-decoration: none;
+				font-family: 'permanent marker', cursive;
+				color: grey;
+				font-size: 28px;
+				border-radius: 25% 25% 25% 25% / 50% 50% 50% 50%;
+				background-color: black;
+				width: 150px;
+				border: 3px outset white;
+				text-shadow: 1px 1px 2px black;
+			}
+			
+			nav ul li a.active
+			{
+				background-color: white;
+				text-shadow: 1px 1px 2px black;
+				border: 3px solid black;
+			}
+			
+			#welcome-paragraph a
+			{
+				align-self: center;
+				margin-top: 30px;
+				border: 4px outset white;
+				padding: 10px 20px;
+				font-family: 'permanent marker', cursive;
+				font-size: 34px;
+				color: white;
+				background-color: dimgrey;
+				text-decoration: none;
+				border-radius: 25% 25% 25% 25% / 50% 50% 50% 50%;
+				text-shadow: 1px 1px 2px black;
+			}
+		</style>
+	</head>
+	
+	<body class="home">
+		<div id="navigation">
+			<nav>
+				<ul>
+					<li><a class="active" href="index.html">Home</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="order.html">Order</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		<h1>Welcome to Tony's!</h1>
+		
+		<div class="row">
+			<div class="paragraph" id="welcome-paragraph">
+				<h2>The Best Pizza in Town</h2>
+				<p>Prepare for the cheesiest, sauciest, most amazing pizza experience of your life! Tony's Pizzeria is here to change the way we look at pizza. Whether you are a meat-lover, veg-head, cheese-enthusiast, spice-seeker, or just a general pizza nut, you chose the right place! At Tony's, there is something for everyone. Click the link below to begin an order for your very own custom pizza. Trust me, your taste buds will thank you.</p>
+				<a class="order-button" href="order.html">Order Now</a>
+			</div>
+			
+			<img src="img/pizza-slices.jpg" alt="Pizza Slice">
+		</div>		
+	</body>
+</html>
