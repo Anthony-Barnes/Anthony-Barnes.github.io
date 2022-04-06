@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Orelega+One&display=swap');
+
+/* Overwrite default settings for various attributes globally */
+*
+{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+/* Formatting and background settings for page */
+body
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 850px;
+	background: radial-gradient(#ABDEF2, #5C9DF2);
+}
+
+/* Main header */
+h1
+{
+	margin: 60px 0px 50px;
+	font-family: 'Orelega One', cursive;
+	font-size: 76px;
+	letter-spacing: 3px;
+	-webkit-text-stroke: 1px black;
+	color: white;
+}
+
+/* Play button that displays on initial load */
+button#play-button
+{
+	font-family: 'Orbitron', sans-serif;
+	font-size: 42px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	padding: 4px 18px 10px;
+	margin: 20px 0px;
+	text-shadow: 1px 1px 1px black;
+	background-color: #D93D04;
+	color: gold;
+	border: none;
+	outline: none;
+	box-shadow: 0px 4px gold;
+	cursor: pointer;
+	transition: background-color 400ms;
+}
+
+button#play-button:hover
+{
+	background-color: #14B602;
+}
+
+button#play-button:active
+{
+	background-color: #009900;
+	box-shadow: 0px 2px gold;
+	transform: translateY(2px);
+}
+
+/* Forms for collecting player names and markers */
+div#player-info-collection
+{
+	text-align: center;
+	width: 720px;
+	border: 8px groove #D94601;
+	margin-bottom: 60px;
+	background-color: #730C02;
+	font-family: 'Orbitron', sans-serif;
+	padding: 20px 0px;
+}
+
+div#player-info-collection form div h2
+{
+	font-size: 30px;
+	color: gold;
+	text-shadow: 1px 1px 1px black;
+	margin-bottom: 16px;
+}
+
+div#player-info-collection form > div
+{
+	padding: 20px 0px;
+}
+
+div#player-info-collection form div.name-entry input[type="text"]
+{
+	text-align: center;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 24px;
+	letter-spacing: 1px;
+	outline: none;
+	padding: 5px 0px;
+}
+
+div#player-info-collection form div.marker-selection div.marker-options 
+{
+	display: flex;
+	justify-content: space-around;
+}
+
+div#player-info-collection form div.marker-selection div.marker-options div
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+div#player-info-collection form div.marker-selection div.marker-options div input[type="radio"]
+{
+	margin-top: 5px;
+}
+
+div#player-info-collection form input[type="submit"]
+{
+	font-family: 'Orbitron', sans-serif;
+	font-size: 22px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	padding: 3px 8px;
+	margin: 20px 0px;
+	text-shadow: 1px 1px 1px black;
+	background-color: #D93D04;
+	color: gold;
+	border: none;
+	outline: none;
+	box-shadow: 0px 2px gold;
+	cursor: pointer;
+	transition: background-color 400ms;
+}
+
+div#player-info-collection form input[type="submit"]:hover
+{
+	background-color: #14B602;
+}
+
+div#player-info-collection form input[type="submit"]:active
+{
+	background-color: #009900;
+	box-shadow: 0px 1px gold;
+	transform: translateY(1px);
+}
+
+/* Tic-tac-toe board */
+div#game-board div[id^="row-"]
+{
+	display: flex;
+}
+
+div#game-board div[id^="row-"] div
+{
+	width: 150px;
+	height: 150px;
+	box-sizing: content-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div#game-board div#row-2 div
+{
+	border-top: 8px groove gold;
+	border-bottom: 8px groove gold;
+}
+
+div#game-board div[id^="row-"] div:nth-child(2)
+{
+	border-left: 8px groove gold;
+	border-right: 8px groove gold;
+}
+
+/* Display area that shows player names, wins, and game events */
+div#game-info
+{
+	border: 8px groove #D94601;
+	margin: 35px 0px 60px;
+	display: flex;
+	background-color: #730C02;
+}
+
+div#game-info > div
+{
+	width: 240px;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Player info */
+div#game-info div.player
+{
+	font-family: 'Orbitron', sans-serif;
+}
+
+div#game-info div.player div.player-name
+{
+	margin: 8px 0px;
+	letter-spacing: 1px;
+	text-align: center;
+	text-shadow: 1px 1px 1px black;
+}
+
+div#game-info div.player div.player-name h3
+{
+	color: white;
+	margin-bottom: 5px;
+	font-size: 21px;
+}
+
+div#game-info div.player div.player-name p
+{
+	color: gold;
+	font-size: 24px;
+	word-wrap: break-word;
+	max-width: 260px;
+}
+
+div#game-info div.player div.wins
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 125px;
+	margin: 8px 0px;
+	padding-bottom: 0px;
+}
+
+div#game-info div.player div.wins h3
+{
+	color: white;
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 1px black;
+}
+
+div#game-info div.player div.wins p.score
+{
+	width: 57px;
+	text-align: center;
+	font-size: 26px;
+	color: red;
+	background-color: black;
+	padding: 3px;
+	border: 4px groove grey;
+}
+
+/* Game events */
+div#game-info div#game-message
+{
+	font-family: 'Orbitron', sans-serif;
+	text-align: center;
+	text-shadow: 1px 1px 1px black;
+	letter-spacing: 2px;
+}
+
+div#game-info div#game-message h3#player-turn
+{
+	color: gold;
+	font-size: 26px;
+	margin: 4px 0px;
+}
+
+div#game-info div#game-message p#event-message
+{
+	color: #5C9DF2;
+	font-size: 32px;
+	font-weight: bold;
+	margin: 4px 0px;
+	word-wrap: break-word;
+	max-width: 350px;
+}
+
+/* Rematch button */
+div#game-info div#game-message button
+{
+	margin: 12px 0px;
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 1px black;
+	padding: 3px 8px;
+	background-color: #D93D04;
+	color: gold;
+	border: none;
+	outline: none;
+	box-shadow: 0px 2px gold;
+	cursor: pointer;
+	transition: background-color 400ms;
+}
+
+div#game-info div#game-message button:hover
+{
+	background-color: #14B602;
+}
+
+div#game-info div#game-message button:active
+{
+	background-color: #009900;
+	box-shadow: 0px 1px gold;
+	transform: translateY(1px);
+}
+
+/* Classes for toggling the display of elements */
+.show
+{
+	display: block;
+}
+
+.hide
+{
+	display: none !important;
+}
